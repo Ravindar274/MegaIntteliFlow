@@ -5,6 +5,8 @@ import com.magaintelliflow.repository.EmployeeRepository;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,8 +19,9 @@ import java.util.List;
 public class MigrationMicroServiceApplication
 //		implements CommandLineRunner
 {
-
+	private static final Logger logger = LoggerFactory.getLogger(MigrationMicroServiceApplication.class);
 	public static void main(String[] args) {
+		logger.info("Starting data migration...");
 		SpringApplication.run(MigrationMicroServiceApplication.class, args);
 	}
 
